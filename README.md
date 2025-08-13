@@ -280,11 +280,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 👤 Authors & Acknowledgments
 
-- **Project Lead**: [Your Name]
-- **Contributors**: [List contributors here]
+- **Project Lead**: Pulast S Tiwari
 - **Dataset**: UNSW-NB15 by University of New South Wales
-- **Inspiration**: Network traffic analysis research community
-
+- **Inspiration**: Samsung EnnovateX 2025 AI Challenge, Problem Statement #8
+Classify User Application Traffic at the Network in a Multi-UE Connected Scenario
 ## 📞 Support
 
 If you encounter issues or have questions:
