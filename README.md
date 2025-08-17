@@ -1,11 +1,11 @@
-# Network Traffic Classifier MVP
+# Network Traffic Classifier
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.3+-green.svg)](https://flask.palletsprojects.com/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
 [![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
 
-Network Traffic Classifier MVP is a robust, production-ready solution for automated classification of network traffic into seven distinct application categories. Leveraging Python, Flask, and scikit-learn, this project demonstrates a full-stack machine learning pipeline, real-time web dashboard, and RESTful API endpoints for practical deployment in multi-user environments (e.g., cellular networks, enterprise LANs).
+Network Traffic Classifier is a robust, production-ready solution for automated classification of network traffic into seven distinct application categories. Leveraging Python, Flask, and scikit-learn, this project demonstrates a full-stack machine learning pipeline, real-time web dashboard, and RESTful API endpoints for practical deployment in multi-user environments (e.g., cellular networks, enterprise LANs).
 
 Core technologies include:
 
@@ -71,7 +71,7 @@ Open your browser and navigate to: **http://localhost:9000**
 
 ## Demo Screenshots
 
-_Add screenshots of your dashboard here_
+Interface Under Progress
 
 ## Development Setup
 
@@ -320,24 +320,17 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## Authors & Acknowledgments
 
-- **Project Lead**: Pulast S Tiwari
-<<<<<<< HEAD
-- **Dataset**: UNSW-NB15 by University of New South Wales
-- **Inspiration**: Samsung EnnovateX 2025 AI Challenge, Problem Statement #8
-Classify User Application Traffic at the Network in a Multi-UE Connected Scenario
-## 📞 Support
-=======
 - **Contributors**: Pulast S Tiwari
+- **Project Lead**: Pulast S Tiwari
 - **Dataset**: UNSW-NB15 by University of New South Wales
-- **Inspiration**: Network traffic analysis research community
+- **Inspiration**: Samsung EnnovateX 2025 AI Challenge, Problem Statement #8 Classify User Application Traffic at the Network in a Multi-UE Connected Scenario
 
 ## Support
->>>>>>> f18ed92 (docs: enhance README with technical description, architecture, and learning resources)
 
 If you encounter issues or have questions:
 
 1. **Check** the troubleshooting section above
-2. **Search** existing [GitHub Issues](https://github.com/yourusername/traffic-classifier/issues)
+2. **Search** existing [GitHub Issues](https://github.com/PulastTiwari/network-traffic-classifier-multi-ue/issues)
 3. **Create** a new issue with detailed description
 4. **Contact** the maintainers
 
