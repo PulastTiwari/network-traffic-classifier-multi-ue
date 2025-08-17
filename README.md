@@ -1,37 +1,49 @@
-# 🌐 Network Traffic Classifier MVP
+# Network Traffic Classifier MVP
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.3+-green.svg)](https://flask.palletsprojects.com/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
 [![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
 
-An end-to-end machine learning solution for classifying network traffic into 7 application categories using real-time analysis and interactive visualization.
+Network Traffic Classifier MVP is a robust, production-ready solution for automated classification of network traffic into seven distinct application categories. Leveraging Python, Flask, and scikit-learn, this project demonstrates a full-stack machine learning pipeline, real-time web dashboard, and RESTful API endpoints for practical deployment in multi-user environments (e.g., cellular networks, enterprise LANs).
 
-## 🎯 Overview
+Core technologies include:
 
-This project implements a complete **Network Traffic Classifier** that analyzes network packet flows and classifies them into application categories. Built for multi-UE (User Equipment) scenarios like cellular networks, it helps network operators optimize bandwidth allocation, ensure quality of service, and detect traffic patterns.
+- **Python 3.8+** for all backend logic and data processing
+- **Flask** for the web application and API layer
+- **scikit-learn** for model training, evaluation, and inference
+- **pandas** and **numpy** for data manipulation
+- **Chart.js** for interactive frontend visualizations
 
-### 📊 Classification Categories
-- 📹 **Video Streaming** - Netflix, YouTube, etc.
-- 📞 **Audio Calls** - Voice calls, VoIP
-- 🎥 **Video Calls** - Zoom, Teams, FaceTime
-- 🎮 **Gaming** - Online games, multiplayer
-- ⬆️ **Video Uploads** - File uploads, streaming
-- 🌐 **Browsing** - Web browsing, HTTP traffic
-- 💬 **Texting** - Messaging, chat applications
+The architecture is modular, with clear separation between data ingestion, feature engineering, model training, and web serving. The system supports both real and synthetic datasets, automatic fallback strategies, and live monitoring of prediction statistics. Designed for extensibility, it is suitable for research, prototyping, and real-world deployment.
 
-## ✨ Features
+## Overview
 
-- 🤖 **Machine Learning**: RandomForest classifier with 80%+ accuracy
-- 📊 **Real-time Dashboard**: Interactive web interface with live predictions
-- 📈 **Visualizations**: Charts and graphs using Chart.js
-- 🔄 **Auto-fallback**: Synthetic data generation when real dataset unavailable
-- 🎛️ **API Endpoints**: RESTful API for integration
-- 🚀 **Easy Setup**: One-command deployment
+This project implements a technically precise **Network Traffic Classifier** that analyzes network packet flows and classifies them into application categories. It is engineered for multi-UE (User Equipment) scenarios, such as cellular networks and enterprise environments, enabling network operators to optimize bandwidth allocation, enforce quality of service, and detect traffic patterns for security and analytics.
 
-## 🚀 Quick Start
+### Classification Categories
+
+- **Video Streaming** (e.g., Netflix, YouTube)
+- **Audio Calls** (e.g., VoIP, voice calls)
+- **Video Calls** (e.g., Zoom, Teams, FaceTime)
+- **Gaming** (e.g., online/multiplayer games)
+- **Video Uploads** (e.g., file uploads, live streaming)
+- **Browsing** (e.g., HTTP/HTTPS web traffic)
+- **Texting** (e.g., messaging, chat applications)
+
+## Core Features
+
+- **Supervised Machine Learning**: RandomForest classifier with 80%+ accuracy
+- **Real-time Dashboard**: Interactive web interface for live predictions and monitoring
+- **Data Visualization**: Dynamic charts and graphs powered by Chart.js
+- **Synthetic Data Fallback**: Automatic generation of realistic traffic samples if real data is unavailable
+- **RESTful API**: Endpoints for integration with external systems and automation
+- **Rapid Deployment**: Simple setup and launch for local or cloud environments
+
+## Quick Start
 
 ### Prerequisites
+
 - **Python 3.8+** ([Download here](https://python.org/downloads/))
 - **Git** ([Download here](https://git-scm.com/downloads))
 - **Internet connection** (for initial dataset download)
@@ -54,13 +66,14 @@ python3 app.py
 ```
 
 ### Access the Application
+
 Open your browser and navigate to: **http://localhost:9000**
 
-## 📱 Demo Screenshots
+## Demo Screenshots
 
-*Add screenshots of your dashboard here*
+_Add screenshots of your dashboard here_
 
-## 🔧 Development Setup
+## Development Setup
 
 ### For Contributors
 
@@ -97,7 +110,7 @@ python3 src/model_trainer.py
 python3 app.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 traffic-classifier/
@@ -128,15 +141,15 @@ traffic-classifier/
 └── DEMO_INSTRUCTIONS.md        # Detailed demo guide
 ```
 
-## 🔍 API Endpoints
+## API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/status` | Check system status and model info |
-| POST | `/api/predict` | Classify network traffic sample |
-| GET | `/api/simulate` | Generate real-time traffic simulation |
-| POST | `/api/train` | Train fallback model with synthetic data |
-| GET | `/api/data-stream` | Get live prediction statistics |
+| Method | Endpoint           | Description                              |
+| ------ | ------------------ | ---------------------------------------- |
+| GET    | `/api/status`      | Check system status and model info       |
+| POST   | `/api/predict`     | Classify network traffic sample          |
+| GET    | `/api/simulate`    | Generate real-time traffic simulation    |
+| POST   | `/api/train`       | Train fallback model with synthetic data |
+| GET    | `/api/data-stream` | Get live prediction statistics           |
 
 ### Example API Usage
 
@@ -153,9 +166,10 @@ curl -X POST -H "Content-Type: application/json" \
 curl http://localhost:9000/api/simulate
 ```
 
-## 🤖 Model Architecture
+## System Architecture
 
 ### Data Pipeline
+
 1. **Data Loading**: UNSW-NB15 dataset with automatic download
 2. **Preprocessing**: Categorical encoding, normalization, feature selection
 3. **Feature Engineering**: 32 derived features → 20 selected via correlation analysis
@@ -163,6 +177,7 @@ curl http://localhost:9000/api/simulate
 5. **Evaluation**: Cross-validation + holdout test set
 
 ### Machine Learning Details
+
 - **Algorithm**: RandomForest Classifier
 - **Hyperparameters**: Grid search optimization (n_estimators, max_depth, min_samples_split)
 - **Features**: 20 engineered features from network flow statistics
@@ -170,13 +185,14 @@ curl http://localhost:9000/api/simulate
 - **Fallback**: GradientBoosting if RandomForest performance < 80%
 
 ### Key Features Used
+
 - Connection patterns (duration, count, service rates)
 - Byte statistics (src_bytes, dst_bytes, ratios)
 - Error rates (connection errors, service errors)
 - Protocol information (TCP/UDP flags)
 - Traffic intensity indicators
 
-## 🔥 Performance Metrics
+## Performance Metrics
 
 ```
 Model Type: RandomForest
@@ -189,29 +205,33 @@ Test Data: 22,544 samples
 ```
 
 ### Per-Category Performance
-| Category | Precision | Recall | F1-Score |
-|----------|-----------|--------|-----------|
-| Browsing | 0.76 | 0.96 | 0.85 |
-| Video Streaming | 0.91 | 0.94 | 0.93 |
-| Gaming | 0.59 | 0.05 | 0.10 |
-| Others | Varies | Varies | Varies |
 
-## 📦 Dataset Information
+| Category        | Precision | Recall | F1-Score |
+| --------------- | --------- | ------ | -------- |
+| Browsing        | 0.76      | 0.96   | 0.85     |
+| Video Streaming | 0.91      | 0.94   | 0.93     |
+| Gaming          | 0.59      | 0.05   | 0.10     |
+| Others          | Varies    | Varies | Varies   |
+
+## Dataset Information
 
 **Primary Dataset**: UNSW-NB15 Network Intrusion Detection Dataset
+
 - **Source**: University of New South Wales (Open Access)
 - **Size**: ~125K training + 22K test samples
 - **Features**: Network flow statistics, timing, protocol info
 - **License**: Creative Commons / Open Data
 
 **Fallback**: Synthetic Traffic Generator
+
 - **Purpose**: Ensures system works without internet connection
 - **Generation**: Realistic patterns for each traffic category
 - **Customizable**: Adjustable sample sizes and distributions
 
-## 🚀 Usage Examples
+## Usage Examples
 
 ### Basic Classification
+
 ```python
 # Load and classify traffic
 from src.data_loader import DataLoader
@@ -224,25 +244,27 @@ print(f"Accuracy: {results['accuracy']:.4f}")
 ```
 
 ### Web Interface Demo
+
 1. Start server: `python3 app.py`
 2. Open browser: http://localhost:9000
 3. Click "🔍 Classify Sample" for instant predictions
 4. Click "⚡ Start Real-time Simulation" for live demo
 5. View charts and statistics in real-time
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
-| Issue | Solution |
-|-------|----------|
-| Port already in use | Change port in `app.py` (line 334) |
-| Dataset download fails | System auto-generates synthetic data |
-| Model accuracy < 80% | Automatic fallback to GradientBoosting |
-| Missing dependencies | Run `pip3 install -r requirements.txt` |
-| Python version error | Ensure Python 3.8+ is installed |
+| Issue                  | Solution                               |
+| ---------------------- | -------------------------------------- |
+| Port already in use    | Change port in `app.py` (line 334)     |
+| Dataset download fails | System auto-generates synthetic data   |
+| Model accuracy < 80%   | Automatic fallback to GradientBoosting |
+| Missing dependencies   | Run `pip3 install -r requirements.txt` |
+| Python version error   | Ensure Python 3.8+ is installed        |
 
 ### Debug Mode
+
 ```bash
 # Run with verbose output
 DEBUG=1 python3 traffic_classifier.py
@@ -252,7 +274,7 @@ python3 src/synthetic_generator.py  # Test data generation
 python3 src/model_trainer.py        # Test model training
 ```
 
-## 👥 Contributing
+## Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -263,28 +285,54 @@ We welcome contributions! Please follow these steps:
 5. **Open** a Pull Request
 
 ### Development Guidelines
+
 - Follow PEP 8 style guidelines
 - Add docstrings to all functions
 - Include unit tests for new features
 - Update documentation as needed
 
-## 📜 License
+## Concepts & Learning Resources
+
+This project leverages several core technologies and concepts. For further learning, refer to the official documentation and resources below:
+
+- [Python Official Documentation](https://docs.python.org/3/)
+- [Flask Web Framework](https://flask.palletsprojects.com/)
+- [scikit-learn Machine Learning Library](https://scikit-learn.org/stable/)
+- [pandas Data Analysis Library](https://pandas.pydata.org/)
+- [NumPy Scientific Computing](https://numpy.org/doc/)
+- [Chart.js Visualization Library](https://www.chartjs.org/docs/latest/)
+- [UNSW-NB15 Dataset Info](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
+- [RESTful API Design](https://restfulapi.net/)
+- [PEP 8 Python Style Guide](https://peps.python.org/pep-0008/)
+
+For contributors, please review the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and best practices.
+
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ### Third-Party Licenses
+
 - **scikit-learn**: BSD License
 - **Flask**: BSD License
 - **pandas**: BSD License
 - **UNSW-NB15 Dataset**: Creative Commons
 
-## 👤 Authors & Acknowledgments
+## Authors & Acknowledgments
 
 - **Project Lead**: Pulast S Tiwari
+<<<<<<< HEAD
 - **Dataset**: UNSW-NB15 by University of New South Wales
 - **Inspiration**: Samsung EnnovateX 2025 AI Challenge, Problem Statement #8
 Classify User Application Traffic at the Network in a Multi-UE Connected Scenario
 ## 📞 Support
+=======
+- **Contributors**: Pulast S Tiwari
+- **Dataset**: UNSW-NB15 by University of New South Wales
+- **Inspiration**: Network traffic analysis research community
+
+## Support
+>>>>>>> f18ed92 (docs: enhance README with technical description, architecture, and learning resources)
 
 If you encounter issues or have questions:
 
@@ -295,4 +343,22 @@ If you encounter issues or have questions:
 
 ---
 
-**🎆 Ready to classify some network traffic? Get started with the quick setup above!**
+**Ready to classify network traffic? Get started with the quick setup above!**
+
+---
+
+## Concepts & Learning Resources
+
+This project leverages several core technologies and concepts. For further learning, refer to the official documentation and resources below:
+
+- [Python Official Documentation](https://docs.python.org/3/)
+- [Flask Web Framework](https://flask.palletsprojects.com/)
+- [scikit-learn Machine Learning Library](https://scikit-learn.org/stable/)
+- [pandas Data Analysis Library](https://pandas.pydata.org/)
+- [NumPy Scientific Computing](https://numpy.org/doc/)
+- [Chart.js Visualization Library](https://www.chartjs.org/docs/latest/)
+- [UNSW-NB15 Dataset Info](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
+- [RESTful API Design](https://restfulapi.net/)
+- [PEP 8 Python Style Guide](https://peps.python.org/pep-0008/)
+
+For contributors, please review the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and best practices.
