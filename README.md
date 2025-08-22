@@ -339,19 +339,3 @@ If you encounter issues or have questions:
 **Ready to classify network traffic? Get started with the quick setup above!**
 
 ---
-
-## Concepts & Learning Resources
-
-This project leverages several core technologies and concepts. For further learning, refer to the official documentation and resources below:
-
-- [Python Official Documentation](https://docs.python.org/3/)
-- [Flask Web Framework](https://flask.palletsprojects.com/)
-- [scikit-learn Machine Learning Library](https://scikit-learn.org/stable/)
-- [pandas Data Analysis Library](https://pandas.pydata.org/)
-- [NumPy Scientific Computing](https://numpy.org/doc/)
-- [Chart.js Visualization Library](https://www.chartjs.org/docs/latest/)
-- [UNSW-NB15 Dataset Info](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
-- [RESTful API Design](https://restfulapi.net/)
-- [PEP 8 Python Style Guide](https://peps.python.org/pep-0008/)
-
-For contributors, please review the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and best practices.
